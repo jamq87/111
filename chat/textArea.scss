@@ -1,0 +1,113 @@
+/* CHAT CHANNEL TEXT AREA */
+%chatForm {
+	margin-top: 1px;
+	&:before {
+		display: none;
+	}
+	.charcounter {
+		color: hsla(0, 0%, 100%, .3);
+	}
+}
+%channelTextArea {
+	background: transparent;
+	transition: all .15s ease-in-out;
+	&:focus-within {
+		box-shadow: 0 0 2px 2px var(--main-color);
+	}
+
+	%channelTextAreaScrollable {
+		background: rgba(0, 0, 0, .6);
+		border: 2px solid transparent;		
+	}
+	%channelTextAreaAttachButton {
+		padding: 10px 10px 10px 12px;
+
+		%channelTextAreaAttachButtonPlus {
+			color: hsla(0, 0%, 100%, .7);
+			transition: all .15s ease-in-out;
+		}
+		&:hover {
+			%channelTextAreaAttachButtonPlus {
+				color: hsla(0, 0%, 100%, .9);
+			}
+		}	
+	}
+	%textArea {
+		%textAreaPlaceholder {
+			color: hsla(0, 0%, 100%, .4);
+			padding-left: 10px;
+		}
+		%slateTextArea {
+			padding-left: 10px;
+		}
+	}
+
+	// BUTTONS
+	%channelTextAreaButton {
+		color: hsla(0, 0%, 100%, .7);
+		transition: all .15s ease-in-out;
+		&:hover {
+			color: hsla(0, 0%, 100%, .9);
+		}
+	}
+
+	// TYPING
+	%channelTextAreaTyping {
+		background: transparent;
+		%channelTextAreaTypingText {
+			color: hsla(0, 0%, 100%, .5);
+			> strong {
+				color: hsla(0, 0%, 100%, .7);
+				font-weight: 700;
+			}
+		}
+	}
+
+	// CHANNEL INFO DISPLAY
+	%channelInfo {
+		background-color: var(--background-overlay);
+		border-radius: 5px;
+		color: hsla(0, 0%, 100%, .7);
+		%channelInfoImage {
+			filter: grayscale(1);
+			opacity: .5;
+		}
+	}
+}
+
+// FOLLOW CHANNEL
+%channelInfo {
+	background-color: var(--background-overlay);
+}
+
+// Reply
+%replyContainer {
+    background: rgba(0,0,0,0.6);
+    border: 2px solid transparent;
+}
+%replyMentionButton {
+	padding: 4px;
+	margin-right: 3px;
+	&.colorMuted-HdFt4q {
+		color: rgb(240, 71, 71);
+	}
+	&.colorBrand-2tjs5J {
+		color: rgb(67, 181, 129);
+	}
+}
+%replyCancelButton {
+	padding: 8px 16px 8px 4px;
+	margin-left: 4px;
+}
+%replySeperator {
+	visibility: hidden;
+	height: 0px;
+	width: 0px;
+}
+%replyingToIndicator {
+	&:before {
+		background-color: var(--main-color);
+	}
+}
+
+// Partial credit to Leafy
